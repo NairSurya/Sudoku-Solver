@@ -14,6 +14,7 @@
 		D8A938A41CAABFA600BB8B08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8A938A21CAABFA600BB8B08 /* LaunchScreen.storyboard */; };
 		D8A938AF1CAABFA600BB8B08 /* Sudoku_SolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A938AE1CAABFA600BB8B08 /* Sudoku_SolverTests.swift */; };
 		D8A938BA1CAABFA600BB8B08 /* Sudoku_SolverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A938B91CAABFA600BB8B08 /* Sudoku_SolverUITests.swift */; };
+		D8A938C91CAAC38400BB8B08 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A938C81CAAC38400BB8B08 /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		D8A938B51CAABFA600BB8B08 /* Sudoku-SolverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sudoku-SolverUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8A938B91CAABFA600BB8B08 /* Sudoku_SolverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sudoku_SolverUITests.swift; sourceTree = "<group>"; };
 		D8A938BB1CAABFA600BB8B08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8A938C81CAAC38400BB8B08 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		D8A938981CAABFA600BB8B08 /* Sudoku-Solver */ = {
 			isa = PBXGroup;
 			children = (
+				D8A938C71CAAC37100BB8B08 /* CustomUI */,
 				D8A938991CAABFA600BB8B08 /* AppDelegate.swift */,
 				D8A9389B1CAABFA600BB8B08 /* ViewController.swift */,
 				D8A9389D1CAABFA600BB8B08 /* Main.storyboard */,
@@ -123,6 +126,14 @@
 				D8A938BB1CAABFA600BB8B08 /* Info.plist */,
 			);
 			path = "Sudoku-SolverUITests";
+			sourceTree = "<group>";
+		};
+		D8A938C71CAAC37100BB8B08 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				D8A938C81CAAC38400BB8B08 /* CustomTextField.swift */,
+			);
+			name = CustomUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +269,7 @@
 			files = (
 				D8A9389C1CAABFA600BB8B08 /* ViewController.swift in Sources */,
 				D8A9389A1CAABFA600BB8B08 /* AppDelegate.swift in Sources */,
+				D8A938C91CAAC38400BB8B08 /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
