@@ -25,6 +25,9 @@ class CustomTextField: UITextField{
         //Text
         self.textColor = UIColor.whiteColor()
         self.textAlignment = NSTextAlignment.Center
+        
+        // If you need any capitalization
+        self.autocapitalizationType = UITextAutocapitalizationType.Words
     }
     
 }
