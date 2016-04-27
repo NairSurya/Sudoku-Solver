@@ -17,15 +17,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="werwr" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lCB-YE-JTB" customClass="CustomTextField" customModule="Sudoku_Solver" customModuleProvider="target">
-                                <rect key="frame" x="26" y="55" width="62" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OU9-8Q-W3q">
+                                <rect key="frame" x="35" y="40" width="531" height="371"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OU9-8Q-W3q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1GR-yl-HeQ"/>
+                            <constraint firstItem="OU9-8Q-W3q" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="i29-Cx-Ab2"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="container" destination="OU9-8Q-W3q" id="kQv-Wb-nsZ"/>
                         <outlet property="mainView" destination="8bC-Xf-vdC" id="L8c-BH-XL1"/>
                     </connections>
                 </viewController>

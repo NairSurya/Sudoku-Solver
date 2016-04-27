@@ -15,6 +15,8 @@
 		D8A938AF1CAABFA600BB8B08 /* Sudoku_SolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A938AE1CAABFA600BB8B08 /* Sudoku_SolverTests.swift */; };
 		D8A938BA1CAABFA600BB8B08 /* Sudoku_SolverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A938B91CAABFA600BB8B08 /* Sudoku_SolverUITests.swift */; };
 		D8A938C91CAAC38400BB8B08 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A938C81CAAC38400BB8B08 /* CustomTextField.swift */; };
+		D8EBDA241CD0D981004A7873 /* GlobalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EBDA231CD0D981004A7873 /* GlobalData.swift */; };
+		D8EBDA261CD0D9E9004A7873 /* LogicSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8EBDA251CD0D9E9004A7873 /* LogicSolver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		D8A938B91CAABFA600BB8B08 /* Sudoku_SolverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sudoku_SolverUITests.swift; sourceTree = "<group>"; };
 		D8A938BB1CAABFA600BB8B08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8A938C81CAAC38400BB8B08 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		D8EBDA231CD0D981004A7873 /* GlobalData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalData.swift; sourceTree = "<group>"; };
+		D8EBDA251CD0D9E9004A7873 /* LogicSolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogicSolver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 		D8A938981CAABFA600BB8B08 /* Sudoku-Solver */ = {
 			isa = PBXGroup;
 			children = (
+				D8EBDA281CD0DA09004A7873 /* Logic */,
+				D8EBDA271CD0D9FC004A7873 /* Protocols */,
 				D8A938C71CAAC37100BB8B08 /* CustomUI */,
 				D8A938991CAABFA600BB8B08 /* AppDelegate.swift */,
 				D8A9389B1CAABFA600BB8B08 /* ViewController.swift */,
@@ -106,6 +112,7 @@
 				D8A938A01CAABFA600BB8B08 /* Assets.xcassets */,
 				D8A938A21CAABFA600BB8B08 /* LaunchScreen.storyboard */,
 				D8A938A51CAABFA600BB8B08 /* Info.plist */,
+				D8EBDA231CD0D981004A7873 /* GlobalData.swift */,
 			);
 			path = "Sudoku-Solver";
 			sourceTree = "<group>";
@@ -134,6 +141,21 @@
 				D8A938C81CAAC38400BB8B08 /* CustomTextField.swift */,
 			);
 			name = CustomUI;
+			sourceTree = "<group>";
+		};
+		D8EBDA271CD0D9FC004A7873 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		D8EBDA281CD0DA09004A7873 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				D8EBDA251CD0D9E9004A7873 /* LogicSolver.swift */,
+			);
+			name = Logic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,8 +289,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8EBDA261CD0D9E9004A7873 /* LogicSolver.swift in Sources */,
 				D8A9389C1CAABFA600BB8B08 /* ViewController.swift in Sources */,
 				D8A9389A1CAABFA600BB8B08 /* AppDelegate.swift in Sources */,
+				D8EBDA241CD0D981004A7873 /* GlobalData.swift in Sources */,
 				D8A938C91CAAC38400BB8B08 /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -496,6 +520,7 @@
 				D8A938C01CAABFA700BB8B08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D8A938C11CAABFA700BB8B08 /* Build configuration list for PBXNativeTarget "Sudoku-SolverTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +529,7 @@
 				D8A938C31CAABFA700BB8B08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D8A938C41CAABFA700BB8B08 /* Build configuration list for PBXNativeTarget "Sudoku-SolverUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +538,7 @@
 				D8A938C61CAABFA700BB8B08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
