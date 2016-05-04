@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBAction func onSolvePressed(sender: UIButton) {
         print("Pressed...")
         let solver = LogicSolver()
-        solver.testFill(arr)
+        //solver.testFill(arr)
         solver.setNonEditableValues(arr)
         solver.fillValues(arr)
     }

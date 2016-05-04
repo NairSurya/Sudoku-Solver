@@ -21,6 +21,7 @@ class LogicSolver: NSObject {
                 item.editable = false
                 print("Setting value of \(item.id) to: \(item.text)")
                 item.value = Int(item.text!)
+                item.backgroundColor = UIColor(red: 0.3, green: 0.3, blue: 0.3, alpha: 0.3)
             }
             else {
                 item.editable = true
@@ -110,7 +111,9 @@ class LogicSolver: NSObject {
 //            }
 //        }
 
-        looper( 0, arr: arr, skip: 0)
+//        looper( 0, arr: arr, skip: 0)
+        
+        newLooper(arr)
 
     }
 
@@ -128,35 +131,51 @@ class LogicSolver: NSObject {
 
     }
 
-    func newLooper () {
-        let START = 0
-        let STOP  = -10
-        var label = START
+    func newLooper (arr: [CustomTextField]) {
+        var pid: Int = 0
+        var skip: Int = 0
+        
+        
+        while(true) {
+    
+            pid = pid + skip
+            if pid < 0 || pid > 80 {
+                return
+            }
+            let pointer = arr[pid]
+            let pValue = pointer.popPossbileValue()
+            if pValue > 0 {
+                
+                pointer.value = -1
+                
+                let verticalID: Int = pointer.id! % 9
+                let horizontalID: Int = 9 * (pointer.id! / 9)
+                let blockID: Int = getBlockID(pointer.id!)
+                
+                if verticalValidation(verticalID, arr: arr, value: pValue) && horizontalValidation(horizontalID, arr: arr, value: pValue) &&
+                    blockValidation(blockID, arr: arr, value: pValue) {
+                        pointer.value = pValue
+                        pointer.text = String(pValue)
+                        skip = 1
+                        continue
+                        
+                } else {
+                    skip = 0
+                    continue
+                    
+                }
+            } else {
+                
+                for i in pointer.id!...80 {
+                    arr[i].clear()
+                }
+                
+                if skip == 0 {
+                    skip = -1
+                }
 
-        while(label != STOP) {
-
-            switch (label) {
-                case START:
-                    if a == b {
-                    label = 123
-                    } else {
-                    label = 456
-                    }
-                    break
-                case 123:
-                    var j = 5;
-                    var x = 2+j;
-                case 456:
-                    fallthrough
+                continue
                 
-                
-                
-                case STOP:
-                    label = STOP
-                    break
-                default:
-                    label = START
-                    break
             }
         }
     }
