@@ -12,25 +12,23 @@ import UIKit
 class CustomTextField: UITextField{
     struct Properties {
         private static var width: CGFloat = 0;
-        
         static func setWidth(width: CGFloat){
             Properties.width = width
         }
         
-        static func getWidth(){
-            return Properties.width
+        static func getWidth() -> CGFloat{
+            return Properties.width;
         }
-        static var height: CGFloat {
-            
-            get {
-                return self.height
-            }
-            
-            set {
-                print("Set height as \(newValue)")
-                self.height = newValue
-            }
-        };
+        
+        
+        private static var height: CGFloat = 0;
+        static func setHeight(height: CGFloat) {
+            Properties.height = height
+        }
+        
+        static func getHeight() -> CGFloat {
+            return Properties.height;
+        }
     }
     required init!(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -41,6 +39,35 @@ class CustomTextField: UITextField{
     override init(frame: CGRect) {
         super.init(frame: frame)
         initialize()
+    }
+    
+
+    var editable: Bool = true
+    var value: Int?
+    var id: Int?
+    var possibleValues = [Int] ()
+    var pIndex = 0
+    func clear() {
+        if editable {
+            value = -1
+            pIndex = 0
+            self.text = ""
+        }
+    }
+    
+    func addPossibleValues(val: Int){
+        possibleValues.append(val)
+    }
+    
+    func popPossbileValue() -> Int {
+        if editable == false {
+            return -1
+        }
+        if pIndex < possibleValues.count {
+            return possibleValues[pIndex++]
+        }
+        
+        return -1
     }
     
     func initialize(){
@@ -58,6 +85,11 @@ class CustomTextField: UITextField{
         
         // If you need any capitalization
         self.autocapitalizationType = UITextAutocapitalizationType.Words
+        self.keyboardType = .NumberPad
+    }
+    
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        
     }
     
 }
